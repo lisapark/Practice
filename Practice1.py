@@ -16,6 +16,7 @@ I generalized the problems, because that's what you should do
 when you program. However, I listed the original value in the
 problem for reference.
 """
+import math
 
 def MultiplesOf3Or5(n):
 	"""
@@ -28,7 +29,13 @@ def MultiplesOf3Or5(n):
 
 	n=1000
 	"""
-	return
+	sum35 = 0
+	for i in range(n):
+		if i%3==0 or i%5 ==0:
+			sum35 = sum35 + i
+	return sum35
+
+print MultiplesOf3Or5(1000)
 
 def SumFibonacciEven(n):
 	"""
@@ -43,7 +50,17 @@ def SumFibonacciEven(n):
 
 	n=4000000
 	"""
-	return
+	fib = [1,2]
+	sumfib = 0
+	while fib[0] <= n:
+		if fib[0]%2 == 0:
+			sumfib = sumfib + fib[0]
+		fib.append(fib[1]+fib[0])
+		fib.pop(0)
+	return sumfib
+
+print SumFibonacciEven(4000000)
+
 
 def LargestPrimeFactor(n):
 	"""
@@ -54,9 +71,23 @@ def LargestPrimeFactor(n):
 
 	n=600851475143
 	"""
-	return
+	primeNumbers = []
+	i = 2
+	while i <= n:
+		if n%i == 0:
+			isPrime = True
+			for primeNum in primeNumbers:
+				if i%primeNum == 0:
+					isPrime = False
+			if isPrime:
+				primeNumbers.append(i)
+			n = n/i
+		i = i + 1
+	return primeNumbers.pop()
 
-def LargestPalindromeProduct:
+print LargestPrimeFactor(6857)
+
+def LargestPalindromeProduct(n):
 	"""
 	Problem 4:
 	A palindromic number reads the same both ways. The largest
@@ -66,11 +97,30 @@ def LargestPalindromeProduct:
 	Find the largest palindrome made from the product of two
 	n-digit numbers.
 
+
 	n=3
 	"""
-	return
 
-def SmallestMultiple:
+	def isPalindrome(mult_ij):
+		stringMult = str(mult_ij)
+		if stringMult == stringMult[::-1]:
+			return True
+		return False
+	nNines = int(math.pow(10,n)) -1
+	reverseRange = range(nNines + 1)
+	reverseRange = reverseRange[::-1]
+	for i in reverseRange:
+		j = nNines
+		while j >= i:
+			mult_ij = i*j
+			if isPalindrome(mult_ij):
+				return mult_ij
+			j = j - 1
+	return -1
+
+print LargestPalindromeProduct(3)
+
+def SmallestMultiple(n):
 	"""
 	Problem 5:
 	2520 is the smallest number that can be divided by each
@@ -81,4 +131,26 @@ def SmallestMultiple:
 
 	n=20
 	"""
-	return
+	smallestMultiple = 1
+	allDivisible = False
+	while allDivisible==False:
+		allDivisible = True
+		for i in range(1,n+1):
+			if smallestMultiple%i !=0:
+
+				noDiv = True
+				for j in range(1,i)[::-1]:
+					if i%j==0:
+						smallestMultiple = smallestMultiple * i/j
+						print smallestMultiple
+						noDiv = False
+						break
+
+				if noDiv:
+					smallestMultiple = smallestMultiple * i
+
+				allDivisible = False
+				break
+	return smallestMultiple
+
+print SmallestMultiple(20)
