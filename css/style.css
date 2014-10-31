@@ -1,0 +1,35 @@
+body{
+	font-family: Helvetica;
+}
+h1{
+	text-align: center;
+}
+.main {
+	background-color: #d9f8ff;
+	width: 800px;
+	height: 500px;
+	padding:1px;
+	margin: auto;
+}
+.header {
+	background-color: #7acbde;
+	padding: 10px 10px;
+	margin: 40px;
+}
+.nav ul{
+	padding: 10px 10px;
+	border: 1px solid black;
+	margin: 40px;
+	text-align:center;
+}
+.content{
+	background-color: #7acbde;
+	padding: 10px 10px;
+	border: 1px solid black;
+	margin: 40px;
+}
+
+.nav li{
+	display:inline;
+	list-style-type: none;
+}
