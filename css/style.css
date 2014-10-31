@@ -4,32 +4,57 @@ body{
 h1{
 	text-align: center;
 }
+div{
+	display:block;
+}
+img{
+	max-width: 100%; height: auto;
+}
 .main {
 	background-color: #d9f8ff;
-	width: 800px;
-	height: 500px;
+	width:800px;
 	padding:1px;
 	margin: auto;
 }
 .header {
 	background-color: #7acbde;
 	padding: 10px 10px;
-	margin: 40px;
+	margin: 30px;
 }
 .nav ul{
+	background-color: #7acbde;
 	padding: 10px 10px;
-	border: 1px solid black;
-	margin: 40px;
+	margin: 30px;
 	text-align:center;
 }
 .content{
 	background-color: #7acbde;
 	padding: 10px 10px;
-	border: 1px solid black;
-	margin: 40px;
+	margin: 30px;
 }
 
 .nav li{
 	display:inline;
+	padding: 0px 30px 0px 30px;
 	list-style-type: none;
+}
+
+.grid{
+	width:612px;
+	margin: 1.5em auto;
+}
+.grid div{
+	float:left;
+	background-color: #10aded;
+	width:200px;
+	height:200px;
+	margin:2px;
+}
+
+.clearfix:after{
+	content: ".";
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear:both;
 }
