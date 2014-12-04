@@ -4,23 +4,71 @@
     	<meta charset="utf-8">
     	<title>Pictures of Cats</title>
     	<link href="css/style.css" rel="stylesheet">
-    	<script src="js/dynamic.js"></script> 
+    	<script src="js/dynamic.js"></script>
+    	<meta http-equiv="refresh" content="5">
   	</head>
   	<body>
   		<div class="main">
 	  		<div class="header">
-	  			<h1>I'm bored</h1> 
+	  			<h1>Cat Questionaire</h1> 
 	  		</div>
 	  		<div class="nav">
 	  			<ul class="nav">
 	  				<li><a href="index.html">Home</a></li>
 	  				<li><a href="me.html">About Me</a></li>
 	  				<li><a href="cats.html">Pictures of Cats</a></li>
-	  				<li><a>I'm bored</a></li>
+	  				<li><a>Cat Questionaire</a></li>
 	  			</ul>
 	  		</div>	
 	  		<div class="content">
-	  			<p>Hello World</p>
+	  			<form action="stuff.txt" method="post">
+	  				<!-- Write your comments here -->
+	  				<fieldset>
+	  					<legend>You</legend>
+		  				<h3>What is your Name?</h3>
+		  				<p><input type="text" name="name" placeholder="Your name"></p>
+
+		  				<h3>What is the password?</h3>
+		  				<input type="password" name="password">
+		  			</fieldset>
+		  			<fieldset>
+		  				<legend>Your Cat</legend>
+		  				<h3>What is your cat's name</h3>
+		  				<input type="cat_name" name="cat_name" placeholder="Your cat's name">
+		  				<h3>How many cats do you have? It is impossible for you to have no cats.</h3>
+	    				<p><input type="radio" name="how_many_cats" id = "one"><label for="one"> One Cat</label></p>
+	    				<p><input type="radio" name="how_many_cats" id = "two"><label for="two">Two Cats</label></p>
+	    				<p><input type="radio" name="how_many_cats" id = "three"><label for="three">Three Cats</label></p>
+	    				<p><input type="radio" name="how_many_cats" id = "four"><label for="four">Four Cats</label></p>
+
+	    				<p><input type="checkbox" name="evil_dogs" checked>I hate dogs</p>
+
+	    				<h3>Tell me a story about your cat(s)!</h3>
+	    				<textarea rows="5" cols="90" name="cat_stories"></textarea>
+
+	    				<h3>What country was your cat born in?</h3>
+	    				<select name="country">
+							<optgroup label="Africa">
+								<option value="gam">Gambia</option>
+								<option value="mad">Madagascar</option>
+								<option value="nam">Namibia</option>
+							</optgroup>
+							<optgroup label="Europe">
+								<option value="fra">France</option>
+								<option value="rus">Russia</option>
+								<option value="uk">UK</option>
+							</optgroup>
+							<optgroup label="North America">
+								<option value="can">Canada</option>
+								<option value="mex">Mexico</option>
+								<option value="usa">USA</option>
+							</optgroup>
+						</select>
+					</fieldset>
+
+					<p><input type="submit" value="CAAAAAAAATTTTSSSSS"></p>
+					<button name="button">Click the Button!</button>
+	  			</form>
 			</div>
 		</div>
   	</body>
