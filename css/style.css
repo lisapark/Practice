@@ -1,5 +1,10 @@
+
+@font-face{
+	font-family: 'myFirstFont';
+    src: url(black_jack-webfont.woff);
+}
 body{
-	font-family: Helvetica;
+	font-family: 'myFirstFont' Helvetica;
 }
 h1{
 	text-align: center;
@@ -11,27 +16,51 @@ img{
 	max-width: 100%; height: auto;
 
 }
+a{
+	font-size: 20px
+}
 .main {
 	background-color: #d9f8ff;
 	width:800px;
 	padding:1px;
 	margin: auto;
+	border-radius: 5px;
 }
 .header {
-	background-color: #7acbde;
+	background: #7acbde url("oie_1kwRfv5PukUn.jpg") no-repeat right top;
+	background-size: 100%;
 	padding: 10px 10px;
 	margin: 30px;
+	border-radius: 5px;
+	color: white;
 }
 .nav ul{
 	background-color: #7acbde;
 	padding: 10px 10px;
 	margin: 30px;
 	text-align:center;
+	border-radius: 5px;
+
 }
 .content{
 	background-color: #7acbde;
 	padding: 10px 10px;
 	margin: 30px;
+	border-radius: 5px;
+
+}
+
+.button {
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #d9f8ff;
+  color: black;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  border-radius: 5px;
 }
 
 .nav li{
@@ -49,13 +78,17 @@ img{
 	background-color: #10aded;
 	width:200px;
 	height:200px;
+	-webkit-transform-style: preserve-3d;
+  	-moz-transform-style: preserve-3d;
+  	transform-style: preserve-3d;
 }
 
 .grid div img{
-  display: table-cell;
-  vertical-align: middle;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+  	max-height:200px;
 }
-
 
 .clearfix:after{
 	content: ".";
